@@ -1,0 +1,142 @@
+body {
+	margin: 0%;
+	padding: 0%;
+}
+.App {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+.header {
+	flex: 30%;
+	background: rgb(2, 0, 36);
+	background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(124, 21, 176, 1) 35%, rgba(76, 99, 198, 1) 100% );
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.inputContainer {
+		display: flex;
+		flex-direction: column;
+	}
+	input {
+		width: 200px;
+		height: 40px;
+		border: none;
+		border-bottom-left-radius: 12px;
+		border-top-left-radius: 12px;
+		padding-left: 10px;
+		font-size: 17px;
+		border: 1px solid rgb(91, 13, 192);
+		background-color: rgb(207, 183, 231);
+		&:hover {
+			transition: 0.5s;
+			background-color: rgb(178, 131, 226);
+		}
+	}
+	button {
+		color: rgb(40, 38, 38);
+		font-weight: bold;
+		font-size: 24px;
+		width: 70px;
+		height: 130px;
+		border: none;
+		border-bottom-right-radius: 8px;
+		border-top-right-radius: 8px;
+		padding-left: 10px;
+		cursor: pointer;
+		background-color: rgb(207, 183, 231);
+		transition: 0.5s;
+		&:hover {
+			transition: 0.5s;
+			background-color: rgb(178, 131, 226);
+		}
+	}
+}
+.todoList {
+	flex: 70%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-top: 50px;
+	flex-direction: column;
+}
+.task {
+	width: 900px;
+	height: 65px;
+	display: flex;
+	color: white;
+	margin: 15px;
+	.content {
+		flex: 80%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			display: grid;
+			place-items: center;
+			border: 1px solid white;
+			width: 100%;
+			height: 100%;
+			font-size: 18px;
+			border-right: none;
+			border-radius: 5px;
+			background: rgb(136, 85, 187) 100%;
+		}
+	}
+}
+.actions {
+	display: flex;
+	gap: 10px;
+	margin-left: 10px;
+	button {
+		width: 100px;
+		border: none;
+		cursor: pointer;
+		transition: 0.5s;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	input {
+		display: none;
+	}
+	label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 5px;
+		font-family: sans-serif;
+		background-color: #aaa7a7d9;
+		height: 65px;
+		width: 140px;
+		cursor: pointer;
+		&:hover {
+			color: #333131;
+			transition: 0.5s;
+			background-color: #979494;
+		}
+	}
+}
+.delete {
+	background-color: rgb(234, 97, 39);
+	color: white;
+	&:hover {
+		background-color: rgb(255, 0, 0);
+		color: #000000;
+		transition: 0.5s;
+	}
+}
+.completed {
+	background-color: greenyellow;
+	&:hover {
+		background-color: rgb(109, 255, 47);
+		color: rgb(255, 255, 255);
+	}
+}
